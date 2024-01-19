@@ -4,6 +4,8 @@ on:
   push:
     branches-ignore:
       - main
+    paths:
+      - "**.py"
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
