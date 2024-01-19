@@ -5,7 +5,7 @@ on:
     branches-ignore:
       - main
     paths:
-      - "**.py"
+      - "**.py"  #test py
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
