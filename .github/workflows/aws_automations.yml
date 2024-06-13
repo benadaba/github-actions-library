@@ -3,6 +3,8 @@ name: List S3 Bucket Contents
 on:
   push:
 
+  workflow_dispatch:
+
 jobs:
   list-s3:
     runs-on: ubuntu-latest
