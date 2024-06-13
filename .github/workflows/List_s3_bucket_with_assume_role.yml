@@ -22,6 +22,7 @@ jobs:
         aws-region: eu-west-2  # Change this to your desired region
         role-to-assume: arn:aws:iam::612773348282:role/s3_access_for_ec2s
         role-session-name: github-actions-session
+        role-duration-seconds: 900
 
     - name: List S3 bucket contents
       run: |
