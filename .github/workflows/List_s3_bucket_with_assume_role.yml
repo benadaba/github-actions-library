@@ -1,4 +1,4 @@
-name: List S3 Bucket Contents
+name: List S3 Bucket Contents With Assume Role
 
 on:
   push:
