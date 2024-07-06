@@ -27,21 +27,7 @@ jobs:
     - name: List S3 bucket contents
       run: |
         aws s3 ls 
-        
-create-ec2-instance:
-    runs-on: ubuntu-latest
-    needs: list-s3-buckets
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up AWS CLI
-      uses: aws-actions/configure-aws-credentials@v2
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
 
     - name: Create EC2 instance
       run: |
-        aws ec2 run-instances --image-id ami-0abcdef1234567890 --count 1 --instance-type t2.micro --key-name YourKeyPairName --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=GitHubActionEC2}]'
+        aws ec2 run-instances --image-id ami-0fe310dde2a8fdc5c --count 1 --instance-type t2.micro --key-name April2024key1 --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=GitHubActionEC2}]'
