@@ -23,3 +23,29 @@ jobs:
     - name: List S3 bucket contents
       run: |
         aws s3 ls 
+  
+
+  list-job2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: job2-steps1
+      uses: actions/checkout@v6
+
+    - name: check the files we checked out
+      run: ls -la
+
+    - name: job2-step2
+      run: touch newfile.txt
+
+    - name: job2-step3-run-bash-script
+      run: bash bashscript.sh
+
+    - name: job2-step4-list-files
+      run: ./bashscript.sh
+
+    - name: multiple commands
+      run: |
+        echo "this is command 1"
+        echo "this is command 2"
+        echo "this is command 3"
+    

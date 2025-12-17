@@ -2,8 +2,8 @@ name: learn-gha
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: 
   push:
-    # branches-ignore:
-    #   - main
+    branches-ignore:
+      - main
     paths:
       - '**.py'  #test py
 jobs:

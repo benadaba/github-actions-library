@@ -1,6 +1,7 @@
 name: Run Bash Script and Linux Commands
 
-on: [push, pull_request]
+# on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   run-script:
