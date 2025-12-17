@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: list repository files -FIRST
+      run: ls -la
+
     - name: Checkout repository
       uses: actions/checkout@v2
 
