@@ -46,8 +46,13 @@ jobs:
     - name: job2-step3-run-bash-script
       run: bash bashscript.sh
 
+
+
     - name: job2-step4-list-files
-      run: ./bashscript.sh
+      run: |
+        whoami
+        chmod +x bashscript.sh
+        ./bashscript.sh
 
     - name: multiple commands
       run: |
